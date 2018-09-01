@@ -16,7 +16,9 @@ class App extends Component {
       name1="EUR"
       name2="USA"
       name3="CHF"
-      name4="GBR" />
+      name4="GBP"
+      name5="KURRS WALUT"
+      name6="kurs z dnia" />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
