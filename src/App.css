@@ -78,6 +78,23 @@ button{
   border:1px solid #000;
   margin:10px;
   padding:5px;
+  background:white;
+}
+
+.container{
+  max-width: 1920px;
+  padding:20px;
+  padding-top:40px;
+
+}
+.container img{
+  width:200px;
+}
+
+.goldSection{
+  width: 100%;
+  display:flex;
+  justify-content: center;
 }
 
 

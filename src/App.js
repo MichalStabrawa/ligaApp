@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import logo from '../src/img/logo.gif';
+
 
 
 import './App.css';
 import FooterClass from '../src/components/FooterClass';
 import HeaderComponent from './components/HeaderComponent';
 import NavComponent from './components/NavComponent';
+import GoldComponents from './components/GoldComponents'
 
 class App extends Component {
   render() {
@@ -17,12 +18,17 @@ class App extends Component {
       name2="USA"
       name3="CHF"
       name4="GBP"
-      name5="KURRS WALUT"
+      name5="KURS WALUT"
       name6="kurs z dnia" />
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+        
         </header>
+
+        <GoldComponents
+        title1="Kurs Złota"
+        title2="kurs z dnia"
+        title3="cena"
+        />
        
         <FooterClass />
 
