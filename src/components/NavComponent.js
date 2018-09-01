@@ -15,6 +15,7 @@ class NavComponent extends React.Component{
   
       }
     render(){
+        
         return(
             <nav>
                 <a>WYNIKI</a>

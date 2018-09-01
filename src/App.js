@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../src/img/logo.gif';
 
+
 import './App.css';
 import FooterClass from '../src/components/FooterClass';
 import HeaderComponent from './components/HeaderComponent';
@@ -11,7 +12,11 @@ class App extends Component {
     return (
       <div className="App">
       <NavComponent />
-      <HeaderComponent />
+      <HeaderComponent
+      name1="EUR"
+      name2="USA"
+      name3="CHF"
+      name4="GBR" />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
