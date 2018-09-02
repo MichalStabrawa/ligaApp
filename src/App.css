@@ -46,7 +46,7 @@ font-weight: bold;
 
 .main{
   background: url(../src/img/tlo.png);
-  height: 40vh;
+ 
   background-size: cover;
   background-position: center;
   padding:20px;
@@ -97,6 +97,25 @@ button{
   width: 100%;
   display:flex;
   justify-content: center;
+}
+
+.table-wrapper{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+table{
+  max-width: 700px;
+  display:block;
+ 
+  margin:0 auto;
+}
+
+.table-wrapper td,th{
+ text-align: left;
+ padding:10px;
 }
 
 
