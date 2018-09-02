@@ -3,6 +3,8 @@ import eurF from '../img/euro.jpg'
 import usaF from '../img/usa.png'
 import frankF from '../img/swi.jpg'
 import funtF from '../img/gb.png'
+
+import ProgressComponent from '../components/ProgressComponent'
 import '../App.css';
 
 
@@ -90,7 +92,7 @@ class HeaderComponent extends React.Component {
         <hr/>
 
         <div className="table-wrapper">
-<h3>{name7}</h3>
+        <h3>{name7}</h3>
           <table>
             <tr><th>KRAJ</th>
             <th>KOD</th>
@@ -99,7 +101,7 @@ class HeaderComponent extends React.Component {
           </table>
         </div>
 
-
+        <ProgressComponent />
       </header>
 
 

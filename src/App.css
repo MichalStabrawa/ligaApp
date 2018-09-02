@@ -126,4 +126,19 @@ table{
   background:grey;
 }
 
+.progress-wrapper{
+  max-width: 1200px;
+  margin:0 auto;
+  display:flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.progress-wrapper .progress-item{
+  width: 30px;
+  height:100px;
+  background:red;
+  margin:10px;
+}
+
 
