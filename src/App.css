@@ -118,4 +118,8 @@ table{
  padding:10px;
 }
 
+.table-wrapper td:nth-child(odd){
+  background:grey;
+}
+
 
