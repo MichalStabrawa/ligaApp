@@ -1,4 +1,8 @@
 import React from 'react';
+import eurF from '../img/euro.jpg'
+import usaF from '../img/usa.png'
+import frankF from '../img/swi.jpg'
+import funtF from '../img/gb.png'
 import '../App.css';
 
 
@@ -13,11 +17,11 @@ class HeaderComponent extends React.Component {
 
     function valueNew() {
 
-      fetch("http://api.nbp.pl/api/exchangerates/tables/a/")
+      fetch("http://api.nbp.pl/api/exchangerates/tables/a/?format=json")
         .then(resp => resp.json())
         .then(resp => {
           console.log("Przykład 2:");
-          console.log(resp[0].effectiveDate);
+          console.log(resp[0].rates[0].currency);
 
           let euro1 = document.getElementById('euro');
           euro1.innerText = resp[0].rates[7].mid;
@@ -35,22 +39,22 @@ class HeaderComponent extends React.Component {
           day1.innerText = resp[0].effectiveDate;
 
 
-          console.log(resp[0].rates);
+          console.log("JASON?"+resp[0].rates[0]);
 
-          let respRates = resp[0].rates;
+          var respRates = resp[0].rates;
 
-          let tableContent = document.querySelector('table');
+          var tableContent = document.querySelector('table');
 
-          for (let i = 0; i <= respRates.length; i++) {
+          for (var i = 0; i <= respRates.length; i++) {
 
 
-            let trNew = document.createElement('tr');
-            let tdNew = document.createElement('td');
-            let tdNewContent = document.createTextNode(respRates[i].currency);
-            let tdNew2 = document.createElement('td');
-            let tdNew2Content = document.createTextNode(respRates[i].code);
-            let tdNew3 = document.createElement('td');
-            let tdNEw3Contnet = document.createTextNode(respRates[i].mid);
+            var trNew = document.createElement('tr');
+            var tdNew = document.createElement('td');
+            var tdNewContent = document.createTextNode(respRates[i].currency);
+            var tdNew2 = document.createElement('td');
+            var tdNew2Content = document.createTextNode(respRates[i].code);
+            var tdNew3 = document.createElement('td');
+            var tdNEw3Contnet = document.createTextNode(respRates[i].mid);
 
 
 
@@ -78,10 +82,10 @@ class HeaderComponent extends React.Component {
         <h2>{name6} <span id="headerData"></span></h2>
 
         <div className="header-wrapper">
-          <div className="header-item">{name1}<hr /><h4 id="euro"></h4></div>
-          <div className="header-item">{name2}<hr /><h4 id="dolar"></h4></div>
-          <div className="header-item">{name3}<hr /><h4 id="swi"></h4></div>
-          <div className="header-item">{name4}<hr /><h4 id="eng"></h4></div>
+          <div className="header-item"><img src={eurF}/>{name1}<hr /><h4 id="euro"></h4></div>
+          <div className="header-item"><img src={usaF}/>{name2}<hr /><h4 id="dolar"></h4></div>
+          <div className="header-item"><img src={frankF}/>{name3}<hr /><h4 id="swi"></h4></div>
+          <div className="header-item"><img src={funtF}/>{name4}<hr /><h4 id="eng"></h4></div>
         </div>
         <hr/>
 
