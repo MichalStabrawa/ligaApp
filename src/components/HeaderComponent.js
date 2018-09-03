@@ -12,7 +12,7 @@ class HeaderComponent extends React.Component {
 
 
   render() {
-    const { name1, name2, name3, name4, name5, name6,name7 } = this.props
+    const { name1, name2, name3, name4, name5, name6,name7,name8 } = this.props
 
 
 
@@ -68,6 +68,15 @@ class HeaderComponent extends React.Component {
             trNew.appendChild(tdNew3)
             tableContent.appendChild(trNew);
 
+            var selectMain=document.getElementById('selectVal');
+            var optionVal=document.createElement('option');
+          optionVal.setAttribute('value','');
+          optionVal.value=respRates[i].mid;
+            var optionValText=document.createTextNode(respRates[i].code);
+
+            optionVal.appendChild(optionValText);
+            selectMain.appendChild(optionVal);
+
 
 
 
@@ -92,6 +101,11 @@ class HeaderComponent extends React.Component {
         <hr/>
 
         <div className="table-wrapper">
+        <h3>{name8}</h3>
+        <div className="table-wrapper2">
+        <label>Podaj kwotę</label><input type="number"  min="0" max="1000"/>
+        <select id="selectVal"><option></option></select>
+        </div>
         <h3>{name7}</h3>
           <table>
             <tr><th>KRAJ</th>
