@@ -117,14 +117,68 @@ table{
   margin:0 auto;
 }
 
+.table-wrapper2{
+  max-width: 488px;
+  margin:0 auto;
+  display: flex;
+  flex-direction:column;
+}
+
 .table-wrapper td,th{
  text-align: left;
  padding:10px;
 }
 
-.table-wrapper td:nth-child(odd){
+.table-wrapper tr:nth-child(odd){
   background:grey;
+  color:#fff;
 }
+.table-wrapper tr:nth-child(1){
+  background:#000;
+  color:#fff;
+}
+
+.table-wrapper label{
+  font-size:20px;
+  margin:5px;
+}
+.table-wrapper input[type="number"]{
+  font-weight: bold;
+    width: 100px;
+    height: 33px;
+    /* padding: 5px; */
+   margin:0px;
+   margin-right:5px;
+    font-size: 20px;
+    border:1px solid grey;
+    margin:0 auto;
+    margin-bottom:25px;
+    padding-left:5px;
+}
+.table-wrapper select{
+  font-weight: bold;
+  width: 100px;
+  height: 37px;
+  /* padding: 5px; */
+ 
+  font-size: 20px;
+  border:1px solid grey;
+  margin:0 auto;
+}
+.span22{
+  margin-top:40px;
+  width: 480px;
+  border-bottom:1px solid grey;
+  padding-bottom:5px;
+  height: 35px;
+
+  margin:0 auto;
+  margin-top:25px;
+  line-height: 35px;
+  font-size:20px;
+}
+
+
 
 .progress-wrapper{
   max-width: 1200px;
@@ -140,5 +194,7 @@ table{
   background:red;
   margin:10px;
 }
+
+
 
 

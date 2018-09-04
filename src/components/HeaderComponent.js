@@ -16,6 +16,8 @@ class HeaderComponent extends React.Component {
     console.log(document.getElementById('selectVal').value);
 var se2=document.getElementById('selectVal').value
     console.log("WYNIK = "+" "+ in1.value*se2);
+    document.querySelector('.span22').innerText=in1.value*se2+"zł"
+;
    
   }
   render(){
@@ -126,9 +128,9 @@ var se2=document.getElementById('selectVal').value
         <div className="table-wrapper">
         <h3>{name8}</h3>
         <div className="table-wrapper2">
-        <label>Podaj kwotę</label><input type="number"  min="0" max="1000" id="input1"/>
-        <select id="selectVal" value="1" onChange={this.handleClick3} ></select>
-        <span classname="span22"></span>
+        <label>Przelicz walutę</label><input type="number"  min="0" max="1000" id="input1"/>
+        <select id="selectVal"  value="" onChange={this.handleClick3} ><option></option></select>
+        <div className="span22"></div>
         </div>
         <h3>{name7}</h3>
           <table>
