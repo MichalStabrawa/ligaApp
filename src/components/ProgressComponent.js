@@ -15,7 +15,7 @@ class ProgressComponent extends React.Component {
             </div>
         )
         var xy=document.getElementById('progress1');
-    xy.style.height="400px"
+    xy.style.height=400+"px";
     }
 
 }

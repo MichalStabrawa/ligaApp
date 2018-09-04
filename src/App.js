@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
+
+
 
 
 import './App.css';
@@ -8,6 +8,7 @@ import FooterClass from '../src/components/FooterClass';
 import HeaderComponent from './components/HeaderComponent';
 import NavComponent from './components/NavComponent';
 import GoldComponents from './components/GoldComponents'
+import ButtonComponent from './components/ButtonComponent'
 
 
 
@@ -34,7 +35,7 @@ class App extends Component {
           title2="kurs z dnia"
           title3="cena"
         />
-
+        <ButtonComponent />
         <FooterClass />
 
 

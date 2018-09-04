@@ -9,12 +9,28 @@ import '../App.css';
 
 
 class HeaderComponent extends React.Component {
-
+  handleClick3=()=> {
+    console.log('Click happened2');
+    var in1=document.getElementById('input1');
+    console.log(in1.value);
+    console.log(document.getElementById('selectVal').value);
+var se2=document.getElementById('selectVal').value
+    console.log("WYNIK = "+" "+ in1.value*se2);
+   
+  }
+  render(){
+      return( <button className="btn1" onClick={this.handleClick1}>Kliknij</button>)
+         
+      
+  }
 
   render() {
     const { name1, name2, name3, name4, name5, name6,name7,name8 } = this.props
 
-
+  
+   
+     
+  
 
 
     function valueNew() {
@@ -86,6 +102,13 @@ class HeaderComponent extends React.Component {
     }
 
     valueNew()
+
+
+
+
+  
+
+  
     return (
 
       <header className="main">
@@ -103,8 +126,9 @@ class HeaderComponent extends React.Component {
         <div className="table-wrapper">
         <h3>{name8}</h3>
         <div className="table-wrapper2">
-        <label>Podaj kwotę</label><input type="number"  min="0" max="1000"/>
-        <select id="selectVal"><option></option></select>
+        <label>Podaj kwotę</label><input type="number"  min="0" max="1000" id="input1"/>
+        <select id="selectVal" value="1" onChange={this.handleClick3} ></select>
+        <span classname="span22"></span>
         </div>
         <h3>{name7}</h3>
           <table>
