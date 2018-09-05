@@ -35,6 +35,51 @@ var se2=document.getElementById('selectVal').value
   
 
 
+  
+
+
+
+
+  
+
+  
+    return (
+
+      <header className="main">
+        <h1>{name5}</h1>
+        <h2>{name6} <span id="headerData"></span></h2>
+
+        <div className="header-wrapper">
+          <div className="header-item"><img src={eurF}/>{name1}<hr /><h4 id="euro"></h4></div>
+          <div className="header-item"><img src={usaF}/>{name2}<hr /><h4 id="dolar"></h4></div>
+          <div className="header-item"><img src={frankF}/>{name3}<hr /><h4 id="swi"></h4></div>
+          <div className="header-item"><img src={funtF}/>{name4}<hr /><h4 id="eng"></h4></div>
+        </div>
+        <hr/>
+
+        <div className="table-wrapper">
+        <h3>{name8}</h3>
+        <div className="table-wrapper2">
+        <label>Przelicz walutę</label><input type="number"  min="0" max="1000" id="input1" placeholder="0"/>
+        <select id="selectVal"   onChange={this.handleClick3} ><option selected></option></select>
+        <div className="span22"></div>
+     
+        </div>
+        <h3>{name7}</h3>
+          <table>
+            <tr><th>KRAJ</th>
+            <th>KOD</th>
+            <th>ŚREDNI KURS</th>
+            </tr>
+          </table>
+        </div>
+
+        <ProgressComponent />
+      </header>
+
+
+    )
+
     function valueNew() {
 
       fetch("http://api.nbp.pl/api/exchangerates/tables/a/?format=json")
@@ -104,49 +149,6 @@ var se2=document.getElementById('selectVal').value
     }
 
     valueNew()
-
-
-
-
-  
-
-  
-    return (
-
-      <header className="main">
-        <h1>{name5}</h1>
-        <h2>{name6} <span id="headerData"></span></h2>
-
-        <div className="header-wrapper">
-          <div className="header-item"><img src={eurF}/>{name1}<hr /><h4 id="euro"></h4></div>
-          <div className="header-item"><img src={usaF}/>{name2}<hr /><h4 id="dolar"></h4></div>
-          <div className="header-item"><img src={frankF}/>{name3}<hr /><h4 id="swi"></h4></div>
-          <div className="header-item"><img src={funtF}/>{name4}<hr /><h4 id="eng"></h4></div>
-        </div>
-        <hr/>
-
-        <div className="table-wrapper">
-        <h3>{name8}</h3>
-        <div className="table-wrapper2">
-        <label>Przelicz walutę</label><input type="number"  min="0" max="1000" id="input1" placeholder="0"/>
-        <select id="selectVal"   onChange={this.handleClick3} ><option selected></option></select>
-        <div className="span22"></div>
-     
-        </div>
-        <h3>{name7}</h3>
-          <table>
-            <tr><th>KRAJ</th>
-            <th>KOD</th>
-            <th>ŚREDNI KURS</th>
-            </tr>
-          </table>
-        </div>
-
-        <ProgressComponent />
-      </header>
-
-
-    )
   }
 }
 
