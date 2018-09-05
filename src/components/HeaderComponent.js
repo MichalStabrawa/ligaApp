@@ -128,9 +128,10 @@ var se2=document.getElementById('selectVal').value
         <div className="table-wrapper">
         <h3>{name8}</h3>
         <div className="table-wrapper2">
-        <label>Przelicz walutę</label><input type="number"  min="0" max="1000" id="input1"/>
-        <select id="selectVal"  value="" onChange={this.handleClick3} ><option></option></select>
+        <label>Przelicz walutę</label><input type="number"  min="0" max="1000" id="input1" placeholder="0"/>
+        <select id="selectVal"   onChange={this.handleClick3} ><option selected></option></select>
         <div className="span22"></div>
+     
         </div>
         <h3>{name7}</h3>
           <table>
